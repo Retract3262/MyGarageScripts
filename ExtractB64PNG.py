@@ -26,8 +26,8 @@ if __name__ == "__main__":
 
     for png in png_list:
         png_data = base64.b64decode(png)
-        png_counter += 1
         with open(os.path.join(PATH, "images", f"{png_counter}.png"), "wb") as out_fp:
             out_fp.write(png_data)
+        png_counter += 1
 
     print(f"Found {png_counter} total png images")
